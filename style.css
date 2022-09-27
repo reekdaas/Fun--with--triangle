@@ -126,6 +126,18 @@ button {
   border: none;
   border-radius: 10px;
 }
+#quiz-submit-btn:hover {
+  background-color: var(--bg-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn {
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: var(--bg-color);
+  border: 2px solid var(--primary-color);
+}
 
 /* footer */
 footer {
