@@ -12,10 +12,15 @@ const calculateHypotenuse = function () {
   const sideB = sides[1].value;
 
   if (sideA && sideB) {
-    let sum = calSumofSquare(Number(sideA), Number(sideB));
-    let lengthOfHypotenuse = Math.sqrt(sum);
-    // console.log(lengthOfHypotenuse);
-    output.innerText = `The length of hypotenuse is ${lengthOfHypotenuse}`;
+    if (sideA > 0 && sideB > 0) {
+      let sum = calSumofSquare(Number(sideA), Number(sideB));
+      let length = Math.sqrt(sum);
+      let lengthOfHypotenuse = length.toFixed();
+      // console.log(lengthOfHypotenuse);
+      output.innerText = `The length of hypotenuse is ${lengthOfHypotenuse}`;
+    } else {
+      output.innerText = `Input should be greater than zero`;
+    }
   } else {
     output.innerText = `Please provide the required input`;
   }

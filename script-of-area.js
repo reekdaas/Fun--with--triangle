@@ -11,8 +11,12 @@ const clickEventHandler = function () {
   let base = inputValues[0].value;
   let height = inputValues[1].value;
   if (base && height) {
-    const areaOfTriangle = calculateArea(Number(base), Number(height));
-    output.innerText = `Area of triangle is ${areaOfTriangle} cm²`;
+    if (base > 0 && height > 0) {
+      const areaOfTriangle = calculateArea(Number(base), Number(height));
+      output.innerText = `Area of triangle is ${areaOfTriangle} cm²`;
+    } else {
+      output.innerText = `Input should be greater than zero`;
+    }
   } else {
     output.innerText = `Please provide the required input`;
   }
